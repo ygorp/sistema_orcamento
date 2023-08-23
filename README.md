@@ -2,7 +2,8 @@
 Projeto para uso interno da empresa, feito para gerar orçamento de sistemas de ponto!
 
 ## Capturas de Tela
-
+![Tela de Login](/static/img/login.png)
+![Tela de Cadastro](/static/img/cadastro.png)
 
 ## Tecnologias Utilizadas
 

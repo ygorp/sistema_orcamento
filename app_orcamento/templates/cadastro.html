@@ -13,7 +13,7 @@
     <section class="form">
         <div class="card">
             <h2>Realize seu cadastro</h2>
-            <form method="post">
+            <form method="post" action="{% url 'cadastro' %}">
                 {% csrf_token %}
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
                 <input type="email" name="email" id="email" placeholder="Digite seu email">

@@ -12,9 +12,9 @@
     <section class="form">
         <div class="card">
             <h2>Entre em sua conta</h2>
-            <form method="post" id="loginForm">
+            <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
+                <input type="text" name="username" id="username" placeholder="Digite seu nome de usuário">
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
 
                 <div class="link">
@@ -26,7 +26,5 @@
         </div>
         
     </section>
-
-    <script src=""></script>
 </body>
 </html>

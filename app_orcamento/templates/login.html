@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Orçamento</title>
+
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+</head>
+<body>
+    <section class="form">
+        <div class="card">
+            <h2>Entre em sua conta</h2>
+            <form method="post" id="loginForm">
+                {% csrf_token %}
+                <input type="email" name="email" id="email" placeholder="Digite seu email">
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+
+                <div class="link">
+                    <a href="#">Cadastre-se</a> | <a href="#">Esqueceu sua senha?</a>
+                </div>
+
+                <input type="submit" value="Acessar" id="btn">
+            </form>
+        </div>
+        
+    </section>
+
+    <script src=""></script>
+</body>
+</html>

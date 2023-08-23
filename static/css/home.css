@@ -5,6 +5,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    background: #545454;
+    width: 100vw;
+    height: 100vh;
+}
+
 .nav-bar {
     width: 100%;
 }
@@ -61,18 +67,68 @@
 
 #btn {
     cursor: pointer;
-    width: 120px;
-    padding: .5rem;
+    width: 100px;
+    padding: 8px;
     border-radius: 10px;
     border: none;
-    background-color: #545454;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000;
     font-size: 18px;
     font-weight: 400;
     transition: .2s all;
 }
 
 #btn:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.orcamento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.solicita-orcamento form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 150px;
+}
+
+#nome,
+#cnpj {
+    width: 380px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+}
+
+#control,
+#relogio,
+#funcionarios,
+#app {
+    width: 190px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+}
+
+#btn-orcamento {
+    cursor: pointer;
+    margin-top: 30px;
+    width: 220px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background-color: #510D0A;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .2s all;
+}
+
+#btn-orcamento:active {
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }

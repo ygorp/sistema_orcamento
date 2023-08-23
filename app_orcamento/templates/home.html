@@ -15,7 +15,7 @@
             <h1>BMvix</h1>
 
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Início</a></li>
                 <li><a href="#">Orçamentos</a></li>
             </ul>
 
@@ -28,26 +28,24 @@
     <section class="orcamento">
         <div class="solicita-orcamento">
             <form action="" method="post">
-                <input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente">
-                <input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ do cliente">
+                {% csrf_token %}
 
-                <div class="inputs1">
-                    <input type="text" name="control" id="control" placeholder="Possui relógio controlid">
-                    <input type="text" name="relogio" id="relogio" placeholder="Possui relógio inmetro">
-                </div>
-
-                <div class="inputs2">
-                    <input type="text" name="funcionarios" id="funcionarios" placeholder="QTD. funcionários ativos">
-                    <input type="text" name="app" id="app" placeholder="Precisa de aplicativo">
-                </div>
+                {{ form.as_p }}
                 
-                <input type="submit" value="Gerar Orçamento" id="btn-orcamento">
+                <button type="submit" value="Gerar Orçamento" id="btn-orcamento" onclick="event.preventDefault(); gerarOrcamento();">Gerar Orçamento</button>
             </form>
         </div>
 
-        <div class="orcamento-gerado">
-            <h2>teste</h2>
+        <div class="orcamento-gerado" id="resultadoDiv">
+            <h2>Opções de sistema ideal para esse cliente:</h2>
+            <p>Cliente:{{ nome_cliente }}</p>
+            <p>CNPJ:{{ cnpj }}</p>
+
         </div>
     </section>
+
+
+    <script src="{% static '/js/home.js' %}"></script>
+    <script src="{% static '/js/home2.js' %}"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -68,7 +69,7 @@ body {
 #btn {
     cursor: pointer;
     width: 100px;
-    padding: 8px;
+    padding: 4px;
     border-radius: 10px;
     border: none;
     background-color: #FFFFFF;
@@ -90,28 +91,35 @@ body {
 
 .solicita-orcamento form {
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 25px;
-    padding-top: 150px;
+    margin-top: 150px;
+    margin-left: 170px;
 }
 
-#nome,
-#cnpj {
+label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+#id_nome_cliente,
+#id_cnpj {
     width: 380px;
-    padding: 13px;
+    padding: 8px;
     border: none;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
-#control,
-#relogio,
-#funcionarios,
-#app {
-    width: 190px;
-    padding: 13px;
-    border: none;
+#id_possui_control_id,
+#id_precisa_aplicativo,
+#id_possui_relogio_inmetro,
+#id_funcionarios_ativos {
     border-radius: 10px;
+    border: none;
 }
 
 #btn-orcamento {
@@ -131,4 +139,50 @@ body {
 #btn-orcamento:active {
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.orcamento-gerado {
+    display: none;
+    width: 450px;
+    height: 500px;
+    background-color: #FFFFFF;
+    margin-top: 80px;
+    margin-left: 80px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.orcamento-gerado h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.orcamento-gerado p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultado li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#btnLink {
+    font-size: 13px;
+    font-weight: 300;
+    margin-left: 8px;
+    color: #510D0A;
+    text-align: center;
+}
+
+.orcamento-gerado h5 {
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 75px;
+    text-align: center;
 }

@@ -1,11 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orçamento - inicio</title>
+
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+
 </head>
 <body>
-    <h1>teste</h1>
+    <section class="nav-bar">
+        <nav class="nav">
+            <h1>BMvix</h1>
+
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Orçamentos</a></li>
+            </ul>
+
+            <div class="btn-logout">
+                <button type="submit">Sair</button>
+            </div>
+        </nav>
+    </section>
 </body>
 </html>

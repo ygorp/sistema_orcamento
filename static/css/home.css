@@ -67,7 +67,10 @@ body {
 }
 
 #btn {
+    display: block;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     width: 100px;
     padding: 4px;
     border-radius: 10px;
@@ -112,14 +115,22 @@ label {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    font-size: 16px;
 }
 
 #id_possui_control_id,
 #id_precisa_aplicativo,
-#id_possui_relogio_inmetro,
-#id_funcionarios_ativos {
+#id_possui_relogio_inmetro {
     border-radius: 10px;
     border: none;
+}
+
+#id_funcionarios_ativos {
+    width: 90px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
 }
 
 #btn-orcamento {

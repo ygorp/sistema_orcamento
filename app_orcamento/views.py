@@ -26,23 +26,28 @@ def home(request):
         if form.is_valid():
             nome_cliente = form.cleaned_data['nome_cliente']
             cnpj = form.cleaned_data['cnpj']
+            ramo_de_atividade = form.cleaned_data['ramo_de_atividade']
+            quantidade_de_cnpj = form.cleaned_data['quantidade_de_cnpj']
+            funcionarios_ativos = form.cleaned_data['funcionarios_ativos']
+            trabalha_com_escala = form.cleaned_data['trabalha_com_escala']
+            utiliza_banco_de_horas = form.cleaned_data['utiliza_banco_de_horas']
             possui_control_id = form.cleaned_data['possui_control_id']
             precisa_aplicativo = form.cleaned_data['precisa_aplicativo']
+            precisa_de_facial = form.cleaned_data['precisa_de_facial']
             possui_relogio_inmetro = form.cleaned_data['possui_relogio_inmetro']
-            funcionarios_ativos = form.cleaned_data['funcionarios_ativos']
 
-            if possui_control_id:
+            if possui_control_id & precisa_aplicativo:
                 sistema_rhid = True
             else:
                 sistema_rhid = False
 
-            if possui_relogio_inmetro:
-                opcoes_orcamento = ['Secullum Web']
+            if possui_relogio_inmetro or possui_control_id & precisa_aplicativo:
+                opcoes_orcamento = ['Secullum WEB PRO']
             else:
                 opcoes_orcamento = ['Secullum Offline']
 
-            if precisa_aplicativo & possui_control_id:
-                opcoes_orcamento = ['RHID']
+            if precisa_aplicativo & possui_control_id or possui_relogio_inmetro & precisa_de_facial:
+                opcoes_orcamento = ['Secullum WEB Ultimate']
             else:
                 opcoes_orcamento = ['Secullum Offline']
                 if precisa_aplicativo:

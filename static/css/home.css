@@ -12,15 +12,12 @@ body {
     height: 100vh;
 }
 
-.nav-bar {
-    width: 100%;
-}
-
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 70px;
+    width: 100%;
+    height: 8vh;
     background-color: #510D0A;
 }
 
@@ -66,6 +63,17 @@ body {
     transform: scaleX(1);
 }
 
+.mobile-menu {
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #FFFFFF;
+    margin: 8px;
+}
+
 #btn {
     display: block;
     cursor: pointer;
@@ -95,8 +103,8 @@ body {
 .solicita-orcamento form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin-top: 150px;
+    gap: 15px;
+    margin-top: 60px;
     margin-left: 170px;
 }
 
@@ -107,7 +115,8 @@ label {
 }
 
 #id_nome_cliente,
-#id_cnpj {
+#id_cnpj,
+#id_ramo_de_atividade {
     width: 380px;
     padding: 8px;
     border: none;
@@ -121,11 +130,12 @@ label {
 #id_possui_control_id,
 #id_precisa_aplicativo,
 #id_possui_relogio_inmetro {
-    border-radius: 10px;
+    border-radius: 50px;
     border: none;
 }
 
-#id_funcionarios_ativos {
+#id_funcionarios_ativos,
+#id_quantidade_de_cnpj {
     width: 90px;
     padding: 8px;
     border-radius: 10px;
@@ -135,7 +145,7 @@ label {
 
 #btn-orcamento {
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 220px;
     padding: 13px;
     border: none;
@@ -196,4 +206,36 @@ label {
     font-weight: 400;
     margin-top: 75px;
     text-align: center;
+}
+
+@media (max-width: 1095px) {
+    .solicita-orcamento {
+        margin-left: -130px;
+    }
+    .orcamento-gerado {
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 918px) {
+    .orcamento {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .orcamento-gerado {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 490px) {
+    #id_nome_cliente,
+    #id_cnpj,
+    #id_ramo_de_atividade {
+        width: 100%;
+    }
+    .orcamento-gerado {
+        width: 85%;
+    }
 }
